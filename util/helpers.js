@@ -230,7 +230,7 @@ export const ports = [
     surface: "#CB74E820",
     status: "Available",
     tone: "green",
-    href: "#",
+    href: "https://github.com/bhavya-dang/Solace",
   },
   {
     name: "Visual Studio Code",

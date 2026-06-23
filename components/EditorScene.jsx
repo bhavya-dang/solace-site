@@ -22,9 +22,10 @@ export default function EditorScene() {
       className="w-full max-w-6xl"
       aria-label="Solace theme preview"
     >
-      <div className="absolute inset-x-6 top-10 h-64 rounded-full bg-solace-violet/15 blur-3xl" />
+      {/* <div className="absolute inset-x-6 top-10 h-64 rounded-full bg-solace-violet/15 blur-3xl" />*/}
+      <div className="absolute left-1/2 top-20 h-40 w-3/5 -translate-x-1/2 rounded-full bg-solace-violet/8 blur-[120px]" />
       <div
-        className={`relative mx-auto w-full max-w-6xl rounded-[28px] border p-3 shadow-soft-violet transition-colors duration-300 ${scene.shell}`}
+        className={`relative mx-auto w-full max-w-6xl rounded-[28px] border p-3 transition-colors duration-300 ${scene.shell}`}
       >
         <div
           className={`overflow-hidden rounded-[22px] border transition-colors duration-300 ${scene.frame}`}
