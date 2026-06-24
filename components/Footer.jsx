@@ -1,5 +1,29 @@
-import SyntaxGradientBar from "../components/SyntaxGradientBar";
+import SyntaxGradientBar from "./SyntaxGradientBar";
 import React from "react";
+
+const footerLinks = (
+  <div className="flex gap-5">
+    <a
+      className="transition hover:text-solace-text"
+      href="https://github.com/bhavya-dang/Solace/"
+    >
+      GitHub
+    </a>
+    <a
+      className="transition hover:text-solace-text"
+      href="https://github.com/bhavya-dang/Solace/issues"
+    >
+      Issues
+    </a>
+    <a
+      className="transition hover:text-solace-text"
+      href="https://github.com/bhavya-dang/Solace/releases"
+    >
+      Releases
+    </a>
+  </div>
+);
+
 export default function Footer() {
   return (
     <footer className="border-t border-solace-border">
@@ -13,26 +37,7 @@ export default function Footer() {
               reserved.
             </p>
           </div>
-          <div className="flex gap-5">
-            <a
-              className="transition hover:text-solace-text"
-              href="https://github.com/bhavya-dang/Solace/"
-            >
-              GitHub
-            </a>
-            <a
-              className="transition hover:text-solace-text"
-              href="https://github.com/bhavya-dang/Solace/issues"
-            >
-              Issues
-            </a>
-            <a
-              className="transition hover:text-solace-text"
-              href="https://github.com/bhavya-dang/Solace/releases"
-            >
-              Releases
-            </a>
-          </div>
+          {footerLinks}
         </div>
       </div>
     </footer>

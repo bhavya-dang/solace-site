@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 
-import MiniPreview from "../components/MiniPreview.jsx";
+// import MiniPreview from "./MiniPreview.jsx";
 import {
   swatches,
   getCodeLines,
@@ -13,8 +13,8 @@ export default function EditorScene() {
   const [theme, setTheme] = useState("dark");
   const light = theme === "light";
   const themeName = light ? "Solace Light" : "Solace";
-  const codeLines = getCodeLines(themeName, light);
-  const scene = getSceneClasses(light);
+  const codeLines = useMemo(() => getCodeLines(themeName, light), [light]);
+  const scene = useMemo(() => getSceneClasses(light), [light]);
 
   return (
     <div

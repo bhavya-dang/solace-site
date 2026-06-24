@@ -3,6 +3,17 @@ import React from "react";
 import { ArrowUpRight, Check, CircleDot, Clock3 } from "lucide-react";
 import { ports, statusStyles } from "../util/helpers";
 
+const portsHeading = (
+  <div>
+    <p className="mb-4 font-mono text-xs uppercase tracking-[0.18em] text-solace-violet">
+      Ports
+    </p>
+    <h2 className="max-w-full text-4xl font-semibold leading-tight text-solace-text sm:text-5xl">
+      Available for all your favourite tools.
+    </h2>
+  </div>
+);
+
 export default function Ports() {
   return (
     <section
@@ -10,14 +21,7 @@ export default function Ports() {
       className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:px-10 lg:py-28"
     >
       <div className="mb-10 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
-        <div>
-          <p className="mb-4 font-mono text-xs uppercase tracking-[0.18em] text-solace-violet">
-            Ports
-          </p>
-          <h2 className="max-w-full text-4xl font-semibold leading-tight text-solace-text sm:text-5xl">
-            Available for all your favourite tools.
-          </h2>
-        </div>
+        {portsHeading}
       </div>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {ports.map((port) => (
