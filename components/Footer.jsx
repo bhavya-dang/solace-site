@@ -31,7 +31,7 @@ export default function Footer() {
         <SyntaxGradientBar />
         <div className="mt-8 flex flex-col gap-5 text-sm text-solace-muted sm:flex-row sm:items-center sm:justify-between">
           <div className="space-y-2">
-            <p>Built with a love for violet.</p>
+            <p>Built with love for violet.</p>
             <p className="text-xs text-solace-muted/70">
               Copyright &copy; {new Date().getFullYear()} Solace. All rights
               reserved.

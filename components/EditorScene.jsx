@@ -19,7 +19,7 @@ export default function EditorScene() {
   return (
     <div
       id="preview"
-      className="w-full max-w-6xl"
+      className="hidden w-full max-w-6xl lg:block"
       aria-label="Solace theme preview"
     >
       {/* <div className="absolute inset-x-6 top-10 h-64 rounded-full bg-solace-violet/15 blur-3xl" />*/}
