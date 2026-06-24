@@ -28,7 +28,7 @@ export default function EditorScene() {
         className={`relative mx-auto w-full max-w-6xl rounded-[28px] border p-3 transition-colors duration-300 ${scene.shell}`}
       >
         <div
-          className={`overflow-hidden rounded-[22px] border transition-colors duration-300 ${scene.frame}`}
+          className={`overflow-hidden rounded-2xl border transition-colors duration-300 ${scene.frame}`}
         >
           <div
             className={`flex items-center justify-between border-b px-4 py-3 transition-colors duration-300 ${scene.topbar}`}
@@ -46,11 +46,11 @@ export default function EditorScene() {
               onClick={() => setTheme(light ? "dark" : "light")}
               aria-label={`Switch to ${light ? "dark" : "light"} theme`}
               className={`
-                flex size-8 items-center justify-center rounded-xl
-                transition-all duration-200
+                group flex size-10 items-center justify-center rounded-xl
+                transition duration-200
                 hover:bg-white/5
                 hover:scale-105
-                active:scale-95
+                active:scale-[0.96]
                 focus:outline-none
                 focus:ring-2
                 ${
@@ -63,11 +63,20 @@ export default function EditorScene() {
                 ${light ? "hover:bg-black/5" : ""}
               `}
             >
-              {light ? (
-                <Sun className="size-4 text-solace-gold transition-transform duration-300 hover:rotate-12" />
-              ) : (
-                <Moon className="size-4 text-solace-violet transition-transform duration-300 hover:-rotate-12" />
-              )}
+              <div className="relative size-4">
+                <Sun
+                  className={`absolute inset-0 size-4 text-solace-gold ${
+                    light ? "opacity-100 scale-100 blur-0" : "opacity-0 scale-[0.25] blur-sm"
+                  } group-hover:rotate-12`}
+                  style={{ transition: "opacity 0.3s cubic-bezier(0.2, 0, 0, 1), transform 0.3s cubic-bezier(0.2, 0, 0, 1), filter 0.3s cubic-bezier(0.2, 0, 0, 1)" }}
+                />
+                <Moon
+                  className={`absolute inset-0 size-4 text-solace-violet ${
+                    light ? "opacity-0 scale-[0.25] blur-sm" : "opacity-100 scale-100 blur-0"
+                  } group-hover:-rotate-12`}
+                  style={{ transition: "opacity 0.3s cubic-bezier(0.2, 0, 0, 1), transform 0.3s cubic-bezier(0.2, 0, 0, 1), filter 0.3s cubic-bezier(0.2, 0, 0, 1)" }}
+                />
+              </div>
             </button>
           </div>
           {/* <div className="grid min-h-[420px] grid-cols-1 sm:grid-cols-[112px_1fr]">*/}
