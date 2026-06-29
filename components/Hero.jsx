@@ -8,10 +8,6 @@ export default function Hero() {
   return (
     <section className="mx-auto w-full max-w-screen-2xl flex flex-col items-center gap-12 px-5 py-12 sm:py-16 sm:px-8 lg:min-h-screen lg:justify-center lg:gap-20 lg:px-10">
       <div className="flex flex-col items-center text-center">
-        <p className="mb-6 rounded-full border border-solace-border bg-solace-raised px-4 py-2 text-sm text-solace-muted">
-          A violet theme family
-        </p>
-
         <h1 className="text-balance text-4xl font-semibold leading-[1.03] tracking-normal text-solace-text sm:text-7xl lg:text-[88px]">
           Calm colors for focused work.
         </h1>
